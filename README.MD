@@ -18,7 +18,7 @@ LookupClient client = new LookupClient("someApiKey", "someClientName");
  Then it's only a matter of sending the lookup request:
  
  ```csharp
-ResponseType response = client.Lookup(url);
+ResponseType response = client.Lookup(url).Result;
  ```
  
  The ResponseType is an enumerator which contains the type of response as defined by Google. Only one extra type was added, "UNKNOWN", for error handling in this library. To check the response type, something like this can be done:
